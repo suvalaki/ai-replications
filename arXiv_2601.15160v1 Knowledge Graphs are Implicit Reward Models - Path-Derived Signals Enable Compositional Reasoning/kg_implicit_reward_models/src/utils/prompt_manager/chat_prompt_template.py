@@ -156,6 +156,9 @@ class LangfuseChatPromptTemplate(ChatPromptTemplate):
                 raise TypeError("Expected a single settings class type parameter.")
             settings_cls = settings_cls[0]
 
+        if isinstance(settings_cls, str):
+            settings_cls = LangfusePromptManagerSettings[settings_cls]
+
         if not _is_settings_cls(settings_cls):
             raise TypeError(
                 "Type parameter must subclass LangfusePromptManagerSettings."
