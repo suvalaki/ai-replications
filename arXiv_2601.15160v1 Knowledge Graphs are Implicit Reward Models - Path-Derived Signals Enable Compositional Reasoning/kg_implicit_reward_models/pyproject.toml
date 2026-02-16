@@ -1,0 +1,24 @@
+[project]
+name = "kg-implicit-reward-models"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain>=1.2.10",
+    "langchain-core>=1.2.12",
+    "langfuse>=3.14.1",
+    "networkx>=3.4.2",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.12.0",
+    "requests>=2.32.5",
+    "tqdm>=4.67.3",
+]
+
+[dependency-groups]
+dev = [
+    "black>=26.1.0",
+    "ipython>=8.38.0",
+    "pyright>=1.1.408",
+    "ruff>=0.15.1",
+]
